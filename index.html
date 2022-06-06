@@ -1,66 +1,74 @@
-<html>
-    <head>
-        <title>.: Minha Lojinha na Internet :.</title>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/448cd6e6d3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat:ital,wght@0,400;0,600;1,400&family=Roboto+Condensed:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
 
-    </head>
-
-    <body>
-        <div id="cabecalho" >
-            <h1>.: Minha Lojinha na Internet :.</h1>
-
+    <title>Paulo Neison</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./logo_paulo.jpg" alt="Logo Paulo Neison">
         </div>
-        <div id="navbar">
-            <div><a href="index.html">Home</a></div>
-            <div><a href="quemsomos.html">Quem Somos</a></div>
-            <div><a href="contato.html">Contato</a></div>
-            <div><a href="blog.html">Fique Por Dentro</a></div>
-        </div>
+        <ul>
+            <li>
+                <a target="_blank" href ="https://github.com/pauloneison" class="fa-brands fa-github"></a>
 
-        <div id="imagemgeral">
-            <img src="imagem.jpg"/>
-        </div>
-        
-        <div id="titulodestaque">
-            <h2>Produto em Destaque</h2>
-        </div>
+            </li>
+            <li>
+                <a target="_blank" href ="mailto:pncruz@outlook.com" class="fa-solid fa-at"></a>
+            </li>
+            <li>
+                <a target="_blank" href ="https://wa.me/61982725744"  class="fa-brands fa-whatsapp"></a>
+            </li>
+        </ul>
 
-        <div id="produtos">
-            <div class="produtodestaque">
-                <img src="produto a.png" >
-                <h3>$ 10,00</h3>
-                <p>Descricao do produto a hiper mega bambambam </p>
-
+    </header>
+    
+    <main>
+        <section class="container">
+            <div class="name">
+                <h1>Paulo Neison</h1>
+                <h5> Estudando Front-End </h5>
             </div>
 
-            <div class="produtodestaque">
-                <img src="produto b.png" >
-                <h3>$ 20,00</h3>
-                <p>Descricao do produto b hiper mega bambambam </p>
-
+            <div onclick ="displayAbout ()" id="arrow">
+                <i id="animation" class="fa-solid fa-angles-down"></i>
             </div>
-
-            <div class="produtodestaque">
-                <img src="produto c.png" >
-                <h3>$ 16,99</h3>
-                <p>Descricao do produto c hiper mega bambambam </p>
-
+            <div style="display: none;" id="about">
+                <p>
+                    Tudo o que você se propor a fazer, faça o seu melhor.
+                    Jamais se comprometa com algo e faça menos do que puder fazer. 
+                    O seu melhor é esperado e ele pode mudar o mundo. 
+ Desconhecido 
+                </p>
             </div>
-
-        </div>
-
-        <div id="rodape"> 
-            <div id="redes sociais">
-                <img src="whats.jpg" /> +55 61-9889898374 <br />
-                <img src="insta.jpg" /> @minhalojinha <br />
+            <div class="form">
+                <div>
+                    <p>Deixe seu contato!</p>
+                </div>
+                <form action="">
+                    <input type="text" placeholder="Seu Melhor Email">
+                    <button>Enviar</button>
+                </form>
             </div>
-            <div id="email">
-                <h3> Receba nossas novidades </h3>
-                <input type="Email" id="inputemail" placeholder="Digite seu email" />
-                <button>Enviar!</button>
-            </div>
-        </div>
-      
-    </body>
+        </section>
 
-
+    </main>
+    <script>
+        function displayAbout () {
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotaçao');
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
+        }
+    </script>
+</body>
 </html>
